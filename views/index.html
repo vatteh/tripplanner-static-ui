@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}Your Trip{% endblock %}
+
+{% block content %}
+	<div>
+		<div class="clearfix main-area">
+			<div class="map-container col-md-8 col-lg-9">
+				{% include 'map.html' %}
+			</div>
+			<div class="col-md-4 col-lg-3">
+				{% include 'controlpanel.html' %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+<script>
+{% autoescape false %}
+var all_hotels = {{ hotels | json }};
+var all_restaurants = { { restaurants | json }};
+var all_things_to_do = { { things_to_do | json }};
+{% endautoescape %}
+</script>
