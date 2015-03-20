@@ -1,31 +1,30 @@
 <div class="panel panel-default">	
 	<div class="panel-heading">
-		<div class="day-buttons" role="tablist">
-			<a class="btn btn-circle day-btn current-day" role="presentation" href="#day-1" role="tab" data-toggle="pill">1</a>
-			<a class="btn btn-circle day-btn current-day" role="presentation" href="#day-2" role="tab" data-toggle="pill">2</a>
-			<a id="add-day" class="btn btn-circle day-btn">+</a>
+		<div class="day-buttons">
+			<button class="btn btn-circle day-btn day-instance current-day">1</button>
+			<button id="add-day" class="btn btn-circle day-btn">+</button>
 		</div>
 	</div>
-	<div class="panel-body tab-content" id="days">
-		<div role="tabpanel" class="tab-pane active" id="day-1">
-			<div>
-				<h4>My Hotels</h4>
-				<ul class="list-group" id="hotels">
-					
-				</ul>
-			</div>
-			<div>
-				<h4>My Restaurants</h4>
-				<ul class="list-group" id="restaurants">
-					
-				</ul>
-			</div>
-			<div>
-				<h4>My Things To Do</h4>
-				<ul class="list-group" id="things">
-					
-				</ul>
-			</div>
+	<div class="panel-body">
+		
+		<div>
+			<h4>My Hotels</h4>
+			<ul class="list-group curr-hotels">
+				
+			</ul>
 		</div>
+		<div>
+			<h4>My Restaurants</h4>
+			<ul class="list-group curr-restaurants">
+				
+			</ul>
+		</div>
+		<div>
+			<h4>My Things To Do</h4>
+			<ul class="list-group curr-things">
+				
+			</ul>
+		</div>
+	
 	</div>
 </div>

@@ -15,10 +15,3 @@
 	</div>
 {% endblock %}
 
-<script>
-{% autoescape false %}
-var all_hotels = {{ hotels | json }};
-var all_restaurants = { { restaurants | json }};
-var all_things_to_do = { { things_to_do | json }};
-{% endautoescape %}
-</script>
