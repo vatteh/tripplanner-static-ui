@@ -110,6 +110,8 @@ body {
   padding: 6px 0;
   font-size: 12px;
   line-height: 42%; }
+  .btn-circle:focus {
+    outline: 0 !important; }
 
 .panel-default {
   background: #efecea;

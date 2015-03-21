@@ -103,8 +103,8 @@ $("#day-title").on('click', '#remove-day', function() {
 		$("#add-day").before('<button class="btn btn-circle day-btn day-instance">' + i + '</button>');
 	});
 
-	currDay = itinerarySelections.length - 1;
-	$(".day-buttons").children(".day-instance:last").addClass("current-day");
+	currDay = (day > itinerarySelections.length - 1) ? itinerarySelections.length - 1 : day;
+	$(".day-buttons").children(".day-instance:nth-child(" + currDay + ")").addClass("current-day");
 
 	if ($(".day-buttons").children(".day-instance").length === 1)
 		$("#remove-day").attr('disabled','disabled');
@@ -175,6 +175,7 @@ function drawLocation (location, opts) {
 
     opts.position = new google.maps.LatLng(location[0], location[1]);
     opts.map = map;
+    opts.animation = google.maps.Animation.DROP;
     var marker = new google.maps.Marker(opts);
     markers.push(marker);
     bounds.extend(marker.position);
